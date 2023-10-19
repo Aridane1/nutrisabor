@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
 
+## External libraries
+
+The only library that has been installed is sweetalert2.
+
+## Figma Project
+
+The figma link is as follows:
+
+https://www.figma.com/file/4gD0E294IFoh93HLihPRew/Nutrisabor?node-id=1%3A362&mode=dev
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
