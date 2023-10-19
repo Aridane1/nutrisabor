@@ -1,0 +1,47 @@
+.card-horizontal {
+    display: flex;
+    gap: 0.5rem;
+    width: 322px;
+    height: 124px;
+    flex-shrink: 0;
+    border-radius: 17px;
+    background: var(--background-card);
+}
+
+.card-vertical {
+    width: 143px;
+    height: 255px;
+    flex-shrink: 0;
+    border-radius: 17px;
+    background: var(--background-card);
+}
+
+img {
+    border-radius: 17px;
+    width: 138px;
+    height: 124px;
+    flex-shrink: 0;
+}
+
+#title p {
+    color: #000;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-align: center;
+
+
+}
+
+#body p {
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}

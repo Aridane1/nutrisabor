@@ -1,0 +1,139 @@
+<div class="form-login" *ngIf="formChoose === 'login'">
+  <form (ngSubmit)="submit()" #userForm="ngForm" class="form-container">
+    <section id="email">
+      <label for="target_name">Nombre de usuario</label>
+      <input
+        [class.is-]
+        placeholder="Ingrese su usuario"
+        type="text"
+        [(ngModel)]="user.name"
+        name="name"
+        id="target_name"
+        #name="ngModel"
+        required
+      />
+    </section>
+    <section *ngIf="name.invalid && name.dirty" class="alert">
+      <p *ngIf="name.errors?.['required']">Campo requerido</p>
+    </section>
+    <section id="password">
+      <label for="target_password">Contraseña:</label>
+      <input
+        type="password"
+        placeholder="Ingrese su contraseña"
+        [(ngModel)]="user.password"
+        name="password"
+        id="target_password"
+        #password="ngModel"
+        required
+        minlength="4"
+      />
+    </section>
+    <section *ngIf="password.invalid && password.dirty" class="alert">
+      <p *ngIf="password.errors?.['required']">Campo requerido</p>
+      <p *ngIf="password.errors?.['minlength']">Mínimo 4 caracteres</p>
+    </section>
+    <section id="button">
+      <input
+        type="submit"
+        value="Iniciar Sesion"
+        [disabled]="!userForm.form.valid"
+      />
+    </section>
+  </form>
+</div>
+
+<div class="form-register" *ngIf="formChoose === 'register'">
+  <form (ngSubmit)="submit()" #userForm="ngForm">
+    <section id="email">
+      <label for="target_email">Correo electrónico:</label>
+      <input
+        type="email"
+        placeholder="Ingrese un correo"
+        [(ngModel)]="user.email"
+        name="email"
+        id="target_email"
+        #email="ngModel"
+        required
+      />
+    </section>
+    <section *ngIf="email.invalid && email.dirty" class="alert">
+      <p *ngIf="email.errors?.['required']">Campo requerido</p>
+    </section>
+
+    <section id="user-name">
+      <label for="target_name">Nombre de usuario:</label>
+      <input
+        type="text"
+        placeholder="Ingrese un nombre de usuario"
+        [(ngModel)]="user.name"
+        name="name"
+        id="target_name"
+        #name="ngModel"
+        required
+      />
+    </section>
+    <section *ngIf="name.invalid && name.dirty" class="alert">
+      <p *ngIf="name.errors?.['required']">Campo requerido</p>
+    </section>
+
+    <section id="password">
+      <label for="target_password">Contraseña:</label>
+      <input
+        type="password"
+        placeholder="Ingrese su contraseña"
+        [(ngModel)]="user.password"
+        name="password"
+        id="target_password"
+        #password="ngModel"
+        required
+        minlength="4"
+      />
+    </section>
+    <section *ngIf="password.invalid && password.dirty" class="alert">
+      <p *ngIf="password.errors?.['required']">Campo requerido</p>
+      <p *ngIf="password.errors?.['minlength']">Mínimo 4 caracteres</p>
+    </section>
+    <section id="button">
+      <input
+        type="submit"
+        value="Crear Cuenta"
+        [disabled]="!userForm.form.valid"
+      />
+    </section>
+  </form>
+</div>
+
+<div class="form-contact" *ngIf="formChoose === 'contact'">
+  <form #commentForm="ngForm">
+    <section id="email">
+      <label>Nombre de usuario:</label>
+      <input
+        type="text"
+        placeholder="Nombre de usuario"
+        disabled
+        value="{{ userName }}"
+      />
+    </section>
+    <section id="coment">
+      <label for="target_comment">Comentario:</label>
+      <textarea
+        placeholder="Introduzca un comentario"
+        [(ngModel)]="user.comment"
+        id="target_comment"
+        name="commentForm"
+        #comment="ngModel"
+        required
+      >
+      </textarea>
+    </section>
+    <section id="button">
+      <input
+        type="button"
+        value="Enviar"
+        [disabled]="!commentForm.form.valid"
+        (click)="submitMessage()"
+      />
+    </section>
+  </form>
+</div>

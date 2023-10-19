@@ -1,0 +1,32 @@
+<div class="container">
+  <header>
+    <section>
+      <p>Buscador</p>
+    </section>
+    <div className="box">
+      <input
+        [(ngModel)]="searcher"
+        type="search"
+        name="search"
+        placeholder="Buscar receta "
+        class="src"
+        autoComplete="off"
+      />
+    </div>
+  </header>
+  <div class="card-container">
+    <app-card
+      *ngFor="let recipe of onSearch()"
+      [cardChoose]="'card-vertical'"
+      [routerLink]="['/recipes', recipe.id]"
+      [img]="recipe.img"
+      [title]="recipe.nombre"
+      [preparationTime]="recipe.tiempo_preparacion"
+      [porcions]="recipe.porciones"
+    ></app-card>
+  </div>
+
+  <div class="footer">
+    <app-menu [miToken]="miToken"></app-menu>
+  </div>
+</div>

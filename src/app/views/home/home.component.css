@@ -1,0 +1,67 @@
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#line {
+    width: 322px;
+    height: 1px;
+    background: #C8C3C3;
+}
+
+header p {
+    position: relative;
+    text-transform: capitalize;
+    font-size: xx-large;
+    font-weight: bold;
+    color: var(--color);
+    font-family: 'Inter', sans-serif;
+
+
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    margin: 0 auto;
+    width: 322px;
+
+}
+
+.container-carrusel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    overflow-x: hidden;
+    border: 1px rgba(0, 0, 0, 0.2) solid;
+    border-radius: 8px;
+    width: 255px;
+    margin: 0 auto;
+}
+
+#carrusel {
+    width: 322px;
+    margin: 0 auto;
+}
+
+.footer {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+    #carrusel {
+        width: 45%;
+    }
+}

@@ -1,0 +1,38 @@
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#arrow-user {
+    height: 95px;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+
+}
+
+.custom-popup {
+    text-align: center;
+    margin: 20px;
+}
+
+.popup-content {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    position: relative;
+    top: 50px;
+    text-transform: uppercase;
+    font-size: xx-large;
+    font-weight: bold;
+}

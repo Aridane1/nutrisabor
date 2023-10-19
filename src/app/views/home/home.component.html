@@ -1,0 +1,25 @@
+<div class="container">
+  <header>
+    <img src="../../../assets/logo-small.svg" alt="logo" />
+    <div id="line"></div>
+    <p>inicio</p>
+  </header>
+  <section id="carrusel">
+    <app-carrusel [recipes]="cards"></app-carrusel>
+  </section>
+
+  <section class="card-container">
+    <app-card
+      *ngFor="let recipe of recipes; index as i"
+      [cardChoose]="'card-horizontal'"
+      [routerLink]="['/recipes', i]"
+      [img]="recipe.img"
+      [title]="recipe.nombre"
+      [preparationTime]="recipe.tiempo_preparacion"
+      [porcions]="recipe.porciones"
+    ></app-card>
+  </section>
+  <footer class="footer">
+    <app-menu [miToken]="miToken"></app-menu>
+  </footer>
+</div>

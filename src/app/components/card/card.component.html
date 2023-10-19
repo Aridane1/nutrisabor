@@ -1,0 +1,24 @@
+<div class="card-horizontal" *ngIf="cardChoose === 'card-horizontal'">
+  <img src="../../../assets/images/{{ img }}" alt=" {{ title }}" />
+  <div id="text-card">
+    <section id="title">
+      <p>{{ title }}</p>
+    </section>
+    <section id="body">
+      <p>{{ preparationTime }}</p>
+      <p>{{ porcions }} porciones</p>
+    </section>
+  </div>
+</div>
+<div class="card-vertical" *ngIf="cardChoose === 'card-vertical'">
+  <img src="../../../assets/images/{{ img }}" alt="imagen comida" />
+  <div id="text-card">
+    <section id="title">
+      <p>{{ title }}</p>
+    </section>
+    <section id="body">
+      <p>{{ preparationTime }}</p>
+      <p>{{ porcions }} porciones</p>
+    </section>
+  </div>
+</div>

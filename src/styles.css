@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --background: #F0EEEE;
+    --background-card: rgba(143, 242, 146, 0.45);
+    --background-form: #D4F4CC;
+    --box-shadow-form: rgba(56, 140, 5, 0.19);
+    --color: black;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: var(--background);
+}

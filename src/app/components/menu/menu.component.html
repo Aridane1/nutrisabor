@@ -1,0 +1,18 @@
+<footer *ngIf="miToken != 0 && pageAs != 'account'">
+  <img src="../../../assets/bx-home.svg" alt="home" routerLink="/home" />
+  <img src="../../../assets/bx-user.svg" alt="user" routerLink="/account" />
+  <img
+    src="../../../assets/bx-search-alt-2.svg"
+    alt="search"
+    routerLink="/search"
+  />
+</footer>
+<footer *ngIf="miToken == 0">
+  <img src="../../../assets/bx-home.svg" alt="home" routerLink="/home" />
+  <img src="../../../assets/bx-user.svg" alt="user" routerLink="/inicio" />
+  <img
+    src="../../../assets/bx-search-alt-2.svg"
+    alt="search"
+    routerLink="/inicio"
+  />
+</footer>

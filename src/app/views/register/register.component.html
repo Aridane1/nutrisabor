@@ -1,0 +1,17 @@
+<div class="container">
+  <header>
+    <section id="arrow">
+      <img src="../../../assets/arrow.svg" alt="arrow" routerLink="/" />
+    </section>
+    <section id="logo">
+      <img src="../../../assets/logo-small.svg" alt="logo" />
+    </section>
+    <p>registrate</p>
+  </header>
+  <section id="form-container">
+    <app-form [formChoose]="'register'"></app-form>
+  </section>
+  <div class="footer">
+    <a routerLink="/login">¿Ya tienes cuenta?</a>
+  </div>
+</div>

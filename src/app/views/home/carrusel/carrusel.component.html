@@ -1,0 +1,13 @@
+<div class="slideshow-container">
+  <div class="mySlides fade" *ngFor="let recipe of recipes">
+    <div class="text">{{ recipe.nombre }}</div>
+    <img
+      src="../../../../assets/images/{{ recipe.img }}"
+      [routerLink]="['/recipes', recipe.id]"
+    />
+  </div>
+
+  <a class="prev" (click)="plusSlides(-1)">❮</a>
+  <a class="next" (click)="plusSlides(1)">❯</a>
+</div>
+<br />

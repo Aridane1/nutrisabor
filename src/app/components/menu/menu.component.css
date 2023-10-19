@@ -1,0 +1,23 @@
+footer {
+    width: 100vw;
+    height: 45px;
+    flex-shrink: 0;
+    border-top: 1px solid #000;
+    background: #C1EFC2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+img:hover {
+    border-radius: 5px;
+    border: 1px solid #000;
+    background: #9FE693;
+}

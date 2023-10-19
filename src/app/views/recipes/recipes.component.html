@@ -1,0 +1,31 @@
+<main class="container">
+  <header>
+    <img src="../../../assets/logo-small.svg" alt="logo" />
+    <div id="line"></div>
+    <p>{{ recipe.nombre }}</p>
+  </header>
+  <section class="recipe-container">
+    <img
+      src="../../../assets/images/{{ recipe.img }}"
+      alt="{{ recipe.nombre }}"
+    />
+    <p>
+      {{ recipe.descripcion }}
+    </p>
+    <p>Tiempo de preparación: {{ recipe.tiempo_preparacion }}</p>
+    <p>El numero de porciones de esta receta es de: {{ recipe.porciones }}</p>
+    <p>Los ingredientes de esta receta son los siguientes:</p>
+    <ul>
+      <li *ngFor="let ingredients of recipe.ingredientes">{{ ingredients }}</li>
+    </ul>
+    <p>Paso ha seguir:</p>
+    <ol>
+      <li *ngFor="let instructions of recipe.instrucciones">
+        {{ instructions }}
+      </li>
+    </ol>
+  </section>
+  <section class="footer">
+    <app-menu [miToken]="1"></app-menu>
+  </section>
+</main>
